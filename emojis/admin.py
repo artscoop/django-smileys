@@ -1,5 +1,5 @@
 from django.contrib import admin
-from smileys.models import Smiley
+from emojis.models import Smiley
 from django.utils.translation import ugettext_lazy as _
 from easy_thumbnails.files import get_thumbnailer
 

@@ -2,17 +2,19 @@
 # -*- coding: utf-8 -*-
 
 from setuptools import setup, find_packages
-import smileys
+
+import emojis
+
 
 setup(
     name='django-smileys-plus',
-    version=smileys.version(),
+    version=emojis.version(),
     description="Easily add, use and manage smileys on your Django-powered site.",
     long_description=open('README.rst', 'r').read(),
     keywords='django, image, smiley, useless, fun',
     author='Artscoop',
     author_email='artscoop93@gmail.com',
-    url='http://bitbucket.org/artscoop/django-smileys/',
+    url='http://github.com/artscoop/django-smileys/',
     license='BSD',
     package_dir={'smileys': 'smileys'},
     include_package_data=True,
@@ -27,10 +29,11 @@ setup(
         'Natural Language :: English',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
+        'Programming Language :: Python :: 3',
         'Topic :: Artistic Software',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
         'Topic :: Multimedia :: Graphics'
     ],
     zip_safe=False,
-    install_requires=['easy_thumbnails>=1.1',]
+    install_requires=['easy_thumbnails>=1.1', ]
 )
