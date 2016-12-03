@@ -7,16 +7,16 @@ import emojis
 
 
 setup(
-    name='django-smileys-plus',
+    name='django-emojis',
     version=emojis.version(),
     description="Easily add, use and manage smileys on your Django-powered site.",
     long_description=open('README.rst', 'r').read(),
-    keywords='django, image, smiley, useless, fun',
+    keywords='django, image, smiley, emoji',
     author='Artscoop',
     author_email='artscoop93@gmail.com',
     url='http://github.com/artscoop/django-smileys/',
     license='BSD',
-    package_dir={'smileys': 'smileys'},
+    package_dir={'emojis': 'emojis'},
     include_package_data=True,
     packages=find_packages(),
     classifiers=[

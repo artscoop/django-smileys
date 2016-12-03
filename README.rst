@@ -62,8 +62,8 @@ somewhere you'll remember.
 Configuration
 =============
 
-First of all, you must add this project to your list of ``INSTALLED_APPS`` in
-``settings.py``::
+First of all, you need to add this project to your list of ``INSTALLED_APPS`` in
+``settings.py`` so that you can use the template tags::
 
     INSTALLED_APPS = (
         'django.contrib.admin',
@@ -72,15 +72,11 @@ First of all, you must add this project to your list of ``INSTALLED_APPS`` in
         'django.contrib.sessions',
         'django.contrib.sites',
         ...
-        'smileys',
+        'emojis',
         ...
     )
 
-You can also define a path to upload smileys, instead of the default one.
-
-    SMILEYS_PATH = 'your_path' # defaults to 'smiley' is not set
-
-Run ``manage.py syncdb``.  This creates a the table in your database that is
+Run ``manage.py migrate``.  This creates the table in your database that is
 necessary for operation.
 
 Usage
@@ -89,10 +85,10 @@ Usage
 Open the template file that you want to have your smileys appear in and make
 sure it has something like this in it::
 
-    {% load smiley_tags %}
+    {% load emojis %}
 
     {% block content %}
-    {{ some_content_var|smileys }}
+    {{ some_content_var|emojis }}
     {% endblock %}
 
 The ``smiley_tags`` library provides you with a ``smileys`` filter, which will
@@ -100,5 +96,3 @@ examine your database for all active smileys.  It then runs though
 ``some_content_var`` (in this example) and replaces the patterns it finds with
 the respective smileys.  More recent versions also contain a
 ``textile_smileys`` tag for users of Textile formatting.  Pretty simple huh!
-
-And useless! w00t.
